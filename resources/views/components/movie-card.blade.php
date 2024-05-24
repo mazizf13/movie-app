@@ -10,11 +10,7 @@
             <span class="mx-2">|</span>
             <span>{{ $movie['release_date'] }}</span>
         </div>
-        <div class="text-gray-400 text-sm">
-            @foreach ($movie['genre_ids'] as $genre)
-                {{ $genres->get($genre) }}@if (!$loop->last), @endif
-            @endforeach
-        </div>
+        <div class="text-gray-400 text-sm">@foreach ($movie['genre_ids'] as $genre){{ $genres->get($genre) }}@if (!$loop->last),@endif @endforeach</div>
     </div>
 </div>
 
