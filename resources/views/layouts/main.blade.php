@@ -8,6 +8,7 @@
 
     @vite('resources/css/app.css')
     @livewireStyles
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.0/dist/cdn.min.js"></script>
 </head>
 <body class="font-sans bg-gray-900 text-white">
     <nav class="border-b border-gray-800">
