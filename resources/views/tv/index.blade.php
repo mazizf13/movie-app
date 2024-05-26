@@ -2,27 +2,27 @@
 
 @section('content')
     <div class="container mx-auto px-4 pt-16">
-        {{-- Popular Movies Start --}}
-        <div class="popular-movies">
+        {{-- Popular Shows Start --}}
+        <div class="popular-tv">
             <h2 class="uppercase tracking-wider text-orange-500 font-semibold">
-                Popular Movies
+                Popular Shows
             </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                @foreach ($popularMovies as $movie)
-                    <x-movie-card :movie="$movie" />
+                @foreach ($popularTv as $tvshow)
+                    <x-tv-card :tvshow="$tvshow" />
                 @endforeach
             </div>
         </div>
-        {{-- Popular Movies End --}}
+        {{-- Popular Shows End --}}
     
         {{-- Now Playing Start --}}
-        <div class="popular-movies">
+        <div class="popular-tv">
             <h2 class="uppercase tracking-wider text-orange-500 font-semibold">
-                Now Playing
+                Top Rated Shows
             </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                @foreach ($nowPlayingMovies as $movie)
-                    <x-movie-card :movie="$movie" />
+                @foreach ($topRatedTv as $tvshow)
+                    <x-tv-card :tvshow="$tvshow" />
                 @endforeach
             </div>
         </div>

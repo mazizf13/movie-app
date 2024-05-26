@@ -1,8 +1,8 @@
 @extends('layouts.main')
 
 @section('content')
-    {{-- Popular Actors Start --}}
     <div class="container mx-auto px-4 py-16">
+        {{-- Popular Actors Start --}}
         <div class="popular-actors">
             <h2 class="text-lg uppercase tracking-wider text-orange-500 font-semibold">
                 Popular Actors
@@ -11,10 +11,7 @@
                 @foreach ($popularActors as $actor)
                     <div class="actor mt-8">
                         <a href="{{ route('actors.show', $actor['id']) }}">
-                            <img 
-                            src="{{ $actor['profile_path'] }}" 
-                            alt="{{ $actor['name'] }}" 
-                            class="hover:opacity-75 transition ease-in-out duration-150">
+                            <img src="{{ $actor['profile_path'] }}" alt="{{ $actor['name'] }}" class="hover:opacity-75 transition ease-in-out duration-150">
                         </a>
                         <div class="mt-2">
                             <a href="{{ route('actors.show', $actor['id']) }}" class="text-lg hover:text-gray-300">{{ $actor['name'] }}</a>
@@ -33,20 +30,6 @@
             <p class="infinite-scroll-last text-center">End of content</p>
             <p class="infinite-scroll-error text-center">Error</p>
         </div>
-
-        {{-- <div class="flex justify-between mt-16">
-            @if ($previous)
-                <a href="/actors/page/{{ $previous }}">Previous</a>
-            @else 
-                <div></div>
-            @endif
-
-            @if ($next)
-                <a href="/actors/page/{{ $next }}">Next</a>
-            @else 
-                <div></div>
-            @endif
-        </div> --}}
     </div>
 @endsection
 
@@ -56,11 +39,11 @@
     <script>
         let elem = document.querySelector('.grid');
         let infScroll = new InfiniteScroll( elem, {
-        // options
-        path: '/actors/page/@{{#}}',
-        append: '.actor',
-        status: '.page-load-status',
-        // history: false,
+            // options
+            path: '/actors/page/@{{#}}',
+            append: '.actor',
+            status: '.page-load-status',
+            // history: false,
         });
     </script>
 @endsection
